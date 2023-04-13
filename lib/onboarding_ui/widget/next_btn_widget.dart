@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_audio_book_ui/const/colors.dart';
+import 'package:flutter_audio_book_ui/const/dimens.dart';
 
 class NextButtonWidget extends StatefulWidget {
   final Function()? onPress;
@@ -13,20 +15,20 @@ class _NextButtonWidgetState extends State<NextButtonWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: Dimens.size16),
       child: MaterialButton(
-        height: 64,
+        height: Dimens.size64,
         minWidth: double.infinity,
         onPressed: widget.onPress,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(100),
+          borderRadius: BorderRadius.circular(Dimens.size100),
         ),
-        color: const Color(0xFFE06065),
+        color:AppColors.access,
         child: const Text(
           'Next',
           style: TextStyle(
             fontWeight: FontWeight.w500,
-            fontSize: 18,
+            fontSize: Dimens.size16,
             color: Color(0xFFF1EEE3),
           ),
         ),

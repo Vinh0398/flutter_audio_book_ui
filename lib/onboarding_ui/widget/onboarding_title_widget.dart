@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_audio_book_ui/const/colors.dart';
+import 'package:flutter_audio_book_ui/const/dimens.dart';
 
 class OnBoardingTitleWidget extends StatelessWidget {
   const OnBoardingTitleWidget({Key? key}) : super(key: key);
@@ -12,16 +14,16 @@ class OnBoardingTitleWidget extends StatelessWidget {
           text: "Choose Your Favourite ",
           style: TextStyle(
             fontWeight: FontWeight.w400,
-            fontSize: 40,
-            color: Color(0xFFF1EEE3),
+            fontSize: Dimens.size40,
+            color: AppColors.titleColor,
           ),
         ),
         TextSpan(
           text: "Genre",
           style: TextStyle(
             fontWeight: FontWeight.w400,
-            fontSize: 40,
-            color: Color(0xFFE36166),
+            fontSize: Dimens.size40,
+            color: AppColors.access,
           ),
         ),
       ]),

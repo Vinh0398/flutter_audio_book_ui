@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_audio_book_ui/gen/assets.gen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class BookCategoryWidget extends StatelessWidget {
@@ -6,11 +7,9 @@ class BookCategoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SvgPicture.asset(
-        "assets/onboarding/Categories.svg",
-        fit: BoxFit.cover,
-      ),
+    return SvgPicture.asset(
+      Assets.svgs.categories,
+      fit: BoxFit.cover,
     );
   }
 }
