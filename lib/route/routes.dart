@@ -1,3 +1,4 @@
+import 'dart:js';
 
 import 'package:flutter_audio_book_ui/home_ui/home_page.dart';
 import 'package:flutter_audio_book_ui/onboarding_ui/onboarding_page.dart';
@@ -30,10 +31,11 @@ GoRoute _onBoardingRoute() {
 
 GoRoute _homePageRoute() {
   return GoRoute(
-      path: RoutePath.homePagePath,
-      pageBuilder: (context, state) {
-        return const NoTransitionPage(
-          child: HomePage(),
-        );
-      });
+    path: RoutePath.homePagePath,
+    pageBuilder: (context, state) {
+      return const NoTransitionPage(
+        child: HomePage(),
+      );
+    },
+  );
 }

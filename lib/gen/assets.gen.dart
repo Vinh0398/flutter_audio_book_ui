@@ -12,12 +12,28 @@ import 'package:flutter/widgets.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/authority_book.jpg
+  AssetGenImage get authorityBook =>
+      const AssetGenImage('assets/images/authority_book.jpg');
+
   /// File path: assets/images/avatar_mock.jpg
   AssetGenImage get avatarMock =>
       const AssetGenImage('assets/images/avatar_mock.jpg');
 
+  /// File path: assets/images/earth_history.jpg
+  AssetGenImage get earthHistory =>
+      const AssetGenImage('assets/images/earth_history.jpg');
+
+  /// File path: assets/images/it_book.jpg
+  AssetGenImage get itBook => const AssetGenImage('assets/images/it_book.jpg');
+
+  /// File path: assets/images/moby_dick.jpg
+  AssetGenImage get mobyDick =>
+      const AssetGenImage('assets/images/moby_dick.jpg');
+
   /// List of all assets
-  List<AssetGenImage> get values => [avatarMock];
+  List<AssetGenImage> get values =>
+      [authorityBook, avatarMock, earthHistory, itBook, mobyDick];
 }
 
 class $AssetsSvgsGen {

@@ -23,7 +23,7 @@ class _NextButtonWidgetState extends State<NextButtonWidget> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(Dimens.size100),
         ),
-        color:AppColors.access,
+        color: AppColors.access,
         child: const Text(
           'Next',
           style: TextStyle(
