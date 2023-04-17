@@ -20,9 +20,17 @@ class $AssetsImagesGen {
   AssetGenImage get avatarMock =>
       const AssetGenImage('assets/images/avatar_mock.jpg');
 
+  /// File path: assets/images/book_background.png
+  AssetGenImage get bookBackground =>
+      const AssetGenImage('assets/images/book_background.png');
+
   /// File path: assets/images/earth_history.jpg
   AssetGenImage get earthHistory =>
       const AssetGenImage('assets/images/earth_history.jpg');
+
+  /// File path: assets/images/isolation.jpg
+  AssetGenImage get isolation =>
+      const AssetGenImage('assets/images/isolation.jpg');
 
   /// File path: assets/images/it_book.jpg
   AssetGenImage get itBook => const AssetGenImage('assets/images/it_book.jpg');
@@ -32,8 +40,15 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/moby_dick.jpg');
 
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [authorityBook, avatarMock, earthHistory, itBook, mobyDick];
+  List<AssetGenImage> get values => [
+        authorityBook,
+        avatarMock,
+        bookBackground,
+        earthHistory,
+        isolation,
+        itBook,
+        mobyDick
+      ];
 }
 
 class $AssetsSvgsGen {

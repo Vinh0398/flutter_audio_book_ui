@@ -9,12 +9,14 @@ class TitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title ?? "",
-      style: const TextStyle(
-        fontWeight: FontWeight.w500,
-        fontSize: Dimens.size16,
-        color: AppColors.textColor,
+    return Center(
+      child: Text(
+        title ?? "",
+        style: const TextStyle(
+          fontWeight: FontWeight.w500,
+          fontSize: Dimens.size20,
+          color: AppColors.textColor,
+        ),
       ),
     );
   }

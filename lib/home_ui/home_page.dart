@@ -10,6 +10,8 @@ import 'package:flutter_audio_book_ui/home_ui/widget/list_book_title_widget.dart
 import 'package:flutter_audio_book_ui/home_ui/widget/title_home_page.dart';
 import 'package:flutter_audio_book_ui/model/book_entity.dart';
 import 'package:flutter_audio_book_ui/model/category_chips_entity.dart';
+import 'package:flutter_audio_book_ui/route/routes.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -19,7 +21,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List<BookEntity> _listBook = [
+  /*final List<BookEntity> _listBook = [
     BookEntity(
       bookId: 1,
       bookName: 'Moby Dick',
@@ -44,7 +46,7 @@ class _HomePageState extends State<HomePage> {
       bookImage: Assets.images.earthHistory.path,
       bookAuthor: 'Steven M.Stanley',
     ),
-  ];
+  ];*/
   final List<CategoryChips> _categoryChips = [
     CategoryChips(
       categoryName: 'All',
@@ -100,7 +102,7 @@ class _HomePageState extends State<HomePage> {
         leftFunctionChild: Assets.images.avatarMock.image(fit: BoxFit.cover),
         rightFunctionChild: const Icon(
           Icons.notifications_none_rounded,
-          color: Color(0xFFF1EEE3),
+          color: AppColors.titleColor,
         ),
         rightFunctionBackgroundColor: AppColors.backgroundSplash,
       ),
@@ -110,14 +112,17 @@ class _HomePageState extends State<HomePage> {
   Widget _buildListBook() {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
-      itemCount: _listBook.length,
+      itemCount: listBook.length,
       shrinkWrap: true,
       physics: const ClampingScrollPhysics(),
       itemBuilder: (context, index) {
-        BookEntity data = _listBook[index];
+        BookEntity data = listBook[index];
         return Padding(
           padding: const EdgeInsets.only(right: Dimens.size16),
-          child: BookItemWidget(bookData: data,),
+          child: BookItemWidget(
+            bookData: data,
+            onPress: () => _onItemPress(data.bookId),
+          ),
         );
       },
     );
@@ -180,7 +185,8 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.only(right: Dimens.size8),
               child: CategoryChipsWidget(
                 category: data,
-                onPress: (selected) => _buildOnSelectedChip(data.isChipSelected),
+                onPress: (selected) =>
+                    _buildOnSelectedChip(data.isChipSelected),
               ),
             );
           },
@@ -200,4 +206,9 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  _onItemPress(int bookId) {
+    final path =
+        "${GoRouter.of(context).location}/${RoutePath.bookDetailPath}/$bookId";
+    return context.go(path);
+  }
 }

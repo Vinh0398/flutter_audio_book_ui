@@ -1,5 +1,5 @@
-import 'dart:js';
 
+import 'package:flutter_audio_book_ui/book_detail_ui/book_detail_page.dart';
 import 'package:flutter_audio_book_ui/home_ui/home_page.dart';
 import 'package:flutter_audio_book_ui/onboarding_ui/onboarding_page.dart';
 import 'package:go_router/go_router.dart';
@@ -37,5 +37,15 @@ GoRoute _homePageRoute() {
         child: HomePage(),
       );
     },
+    routes: [
+      GoRoute(
+        path: "${RoutePath.bookDetailPath}/:bookId",
+        builder: (context, state) {
+          return BookDetailPage(
+            bookId: state.params['bookId'],
+          );
+        },
+      ),
+    ],
   );
 }

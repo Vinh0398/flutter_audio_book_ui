@@ -9,4 +9,5 @@ class AppColors {
   static const Color textColor = Color(0xFF191815);
   static const Color gradientColor = Color(0xFFF1EEE3);
   static const Color chipsColor = Color(0xFFE7E0CB);
+  static const Color disableTextColor = Color(0xFFA5A296);
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_audio_book_ui/app_bar_ui/widget/function_button.dart';
 import 'package:flutter_audio_book_ui/app_bar_ui/widget/title_widget.dart';
 import 'package:flutter_audio_book_ui/const/dimens.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomAppbar extends StatefulWidget {
   final Widget leftFunctionChild;
@@ -37,12 +38,12 @@ class _CustomAppbarState extends State<CustomAppbar> {
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FunctionButton(
             backgroundColor: widget.leftFunctionBackgroundColor,
-            onPress: widget.leftFunctionOnPress,
+            onPress: widget.leftFunctionOnPress ?? context.pop,
             child: widget.leftFunctionChild,
           ),
           Expanded(
@@ -50,14 +51,12 @@ class _CustomAppbarState extends State<CustomAppbar> {
               title: widget.title,
             ),
           ),
-          Expanded(
-            child: Align(
-              alignment: Alignment.topRight,
-              child: FunctionButton(
-                onPress: widget.rightFunctionOnPress,
-                backgroundColor: widget.rightFunctionBackgroundColor,
-                child: widget.rightFunctionChild,
-              ),
+          Align(
+            alignment: Alignment.topRight,
+            child: FunctionButton(
+              onPress: widget.rightFunctionOnPress,
+              backgroundColor: widget.rightFunctionBackgroundColor,
+              child: widget.rightFunctionChild,
             ),
           )
         ],
