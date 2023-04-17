@@ -1,4 +1,3 @@
-
 import 'package:flutter_audio_book_ui/book_detail_ui/book_detail_page.dart';
 import 'package:flutter_audio_book_ui/home_ui/home_page.dart';
 import 'package:flutter_audio_book_ui/onboarding_ui/onboarding_page.dart';
@@ -12,13 +11,13 @@ class RoutePath {
   static const bookDetailPath = "bookDetail";
 }
 
-get router => GoRouter(
-        debugLogDiagnostics: true,
-        initialLocation: RoutePath.onBoardingPath,
-        routes: [
-          _onBoardingRoute(),
-          _homePageRoute(),
-        ]);
+final router = GoRouter(
+    debugLogDiagnostics: true,
+    initialLocation: RoutePath.onBoardingPath,
+    routes: [
+      _onBoardingRoute(),
+      _homePageRoute(),
+    ]);
 
 GoRoute _onBoardingRoute() {
   return GoRoute(
