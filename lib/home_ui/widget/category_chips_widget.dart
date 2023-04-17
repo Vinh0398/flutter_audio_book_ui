@@ -27,8 +27,8 @@ class _CategoryChipsWidgetState extends State<CategoryChipsWidget> {
         textAlign: TextAlign.center,
       ),
       labelPadding: const EdgeInsets.symmetric(
-        vertical: Dimens.size14,
-        horizontal: Dimens.size25,
+        vertical: Dimens.size8,
+        horizontal: Dimens.size24,
       ),
       labelStyle: TextStyle(
         fontWeight: FontWeight.w400,

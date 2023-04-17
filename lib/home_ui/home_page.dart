@@ -21,32 +21,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  /*final List<BookEntity> _listBook = [
-    BookEntity(
-      bookId: 1,
-      bookName: 'Moby Dick',
-      bookImage: Assets.images.mobyDick.path,
-      bookAuthor: 'Herman Meville',
-    ),
-    BookEntity(
-      bookId: 2,
-      bookName: 'Authornity',
-      bookImage: Assets.images.authorityBook.path,
-      bookAuthor: 'Jeff Vandermer',
-    ),
-    BookEntity(
-      bookId: 3,
-      bookName: 'IT',
-      bookImage: Assets.images.itBook.path,
-      bookAuthor: 'Stephen King',
-    ),
-    BookEntity(
-      bookId: 4,
-      bookName: 'Earth History',
-      bookImage: Assets.images.earthHistory.path,
-      bookAuthor: 'Steven M.Stanley',
-    ),
-  ];*/
+
   final List<CategoryChips> _categoryChips = [
     CategoryChips(
       categoryName: 'All',
