@@ -8,4 +8,4 @@ Screenshots:
 
 |        Screenshot 1         |        Screenshot 2         |        Screenshot 3         |
 |:---------------------------:|:---------------------------:|:---------------------------:|
-| ![](./resources/image3.jpg) | ![](./resources/image2.jpg) | ![](./resources/image1.jpg) |
+| ![](./resources/image1.jpg) | ![](./resources/image2.jpg) | ![](./resources/image3.jpg) |
