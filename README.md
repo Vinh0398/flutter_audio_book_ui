@@ -6,6 +6,6 @@ UI concept Flutter project
 
 Screenshots: 
 
-|        Screenshot 1         |        Screenshot 2         |
-|:---------------------------:|:---------------------------:|
-| ![](./resources/image1.jpg) | ![](./resources/image2.jpg) |
+|        Screenshot 1         |        Screenshot 2         |        Screenshot 3         |
+|:---------------------------:|:---------------------------:|:---------------------------:|
+| ![](./resources/image1.jpg) | ![](./resources/image2.jpg) | ![](./resources/image3.jpg) |
