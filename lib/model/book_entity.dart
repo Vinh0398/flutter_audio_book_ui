@@ -1,4 +1,5 @@
 import 'package:flutter_audio_book_ui/gen/assets.gen.dart';
+import 'package:flutter_audio_book_ui/model/book_chapter_entity.dart';
 import 'package:flutter_audio_book_ui/model/book_information_entity.dart';
 
 class BookEntity {

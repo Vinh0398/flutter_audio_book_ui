@@ -6,6 +6,8 @@ import 'package:flutter_audio_book_ui/book_detail_ui/widget/book_play_bar.dart';
 import 'package:flutter_audio_book_ui/const/colors.dart';
 import 'package:flutter_audio_book_ui/const/dimens.dart';
 import 'package:flutter_audio_book_ui/model/book_entity.dart';
+import 'package:flutter_audio_book_ui/route/routes.dart';
+import 'package:go_router/go_router.dart';
 
 class BookDetailPage extends StatefulWidget {
   final String? bookId;
@@ -40,7 +42,9 @@ class _BookDetailPageState extends State<BookDetailPage> {
             bookDetail.bookName,
             bookDetail.bookAuthor,
           ),
-          const BookPlayBar(),
+          BookPlayBar(
+            playOnPress: () => _onPress(),
+          ),
         ],
       ),
     );
@@ -110,5 +114,11 @@ class _BookDetailPageState extends State<BookDetailPage> {
         )
       ],
     );
+  }
+
+  _onPress() {
+    final path =
+        "${GoRouter.of(context).location}/${RoutePath.bookChapterPath}";
+    return context.go(path);
   }
 }
