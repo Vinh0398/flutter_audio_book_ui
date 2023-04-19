@@ -12,6 +12,7 @@ class TitleWidget extends StatelessWidget {
     return Center(
       child: Text(
         title ?? "",
+        overflow: TextOverflow.ellipsis,
         style: const TextStyle(
           fontWeight: FontWeight.w500,
           fontSize: Dimens.size20,
